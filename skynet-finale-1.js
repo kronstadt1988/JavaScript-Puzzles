@@ -11,29 +11,21 @@ var E = parseInt(inputs[2]); // the number of exit gateways
 var arrayOfGateways = [];
 var g = new Graph(N)
 
-printErr(N)
-printErr(L)
-printErr(E)
+
 var arrayOfEdges = [];
 
 for (var i = 0; i < L; i++) {
     var inputs = readline().split(' ');
     var N1 = parseInt(inputs[0]); // N1 and N2 defines a link between these nodes
     var N2 = parseInt(inputs[1]);
-    
-    printErr("N1 " + N1)
-    printErr("N2 " + N2)
+   
     arrayOfEdges.push({"n1":N1, "n2" : N2})
     g.addEdge(N1,N2);
 }
 for (var i = 0; i < E; i++) {
     var EI = parseInt(readline()) // the index of a gateway node
     arrayOfGateways.push({"node" :EI, "array" : []});
-    printErr("EI "+EI)
 }
-printErr("N " + N)
-printErr("L " + L)
-printErr("E " + E)
 
 function Graph(v){
     this.vertices = v;
@@ -98,7 +90,6 @@ function Graph(v){
 
             })
         }
-
         return{
             distance : distance,
             pred : pred
@@ -122,10 +113,6 @@ while (true) {
     for(var i = 0; i<g.marked.length; i++){
         g.marked[i]=false
     }
-    
-    
-    
-    
     for(var i = 0 ; i<arrayOfGateways.length; i++){
         arrayOfGateways[i].array.distance
         printErr("Current Node is " + arrayOfGateways[i].node)
