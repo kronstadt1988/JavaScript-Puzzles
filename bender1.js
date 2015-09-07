@@ -18,31 +18,24 @@ var matrix = [];
 
 for (var i = 0; i < L; i++) {
     var row = readline();
-    
     if(row.contains('@')){
         startPointY = i;
-        startPointX = row.indexOf('@')
-        
+        startPointX = row.indexOf('@');
     }
     if(row.contains('$')){
         endPointY = i;
-        endPointX = row.indexOf('$')
-        
+        endPointX = row.indexOf('$');
     }
     if(row.contains('T') && teleport1X ===-1){
         teleport1Y = i;
-        teleport1X = row.indexOf('T')
-        
+        teleport1X = row.indexOf('T');
     }
     if(row.contains('T') && teleport1X > 0){
         teleport2Y = i;
-        teleport2X = row.indexOf('T')
+        teleport2X = row.indexOf('T');
     }
-    
     row = row.split('');
-    matrix.push(row)
-   
-    
+    matrix.push(row);
 }
 
 function transpose(a) {
