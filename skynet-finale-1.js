@@ -109,17 +109,12 @@ arrayOfGateways.forEach(function(item,index){
 while (true) {
     var printed = false;
     var SI = parseInt(readline());
-    printErr("Virus in " + SI);
     for(var i = 0; i<g.marked.length; i++){
         g.marked[i]=false
     }
     for(var i = 0 ; i<arrayOfGateways.length; i++){
         arrayOfGateways[i].array.distance
-        printErr("Current Node is " + arrayOfGateways[i].node)
-        printErr("Virus tistance to it " + arrayOfGateways[i].array.distance[SI])
         if(arrayOfGateways[i].array.distance[SI]===1){
-            printErr(arrayOfGateways[i].node)
-            printErr(arrayOfGateways[i].array.distance)
             print(arrayOfGateways[i].node +" " +SI);
             printed=true;
         }
