@@ -254,7 +254,6 @@ while(!bender.travelFinished){
     }
 }
 
-
 if(bender.isInLoop===true){
      print("LOOP")
 
